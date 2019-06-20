@@ -322,81 +322,102 @@
 
       <!-- SECTION DOWNLOAD -->
       <div class="section-wrapper tab-pane fade" id="download" role="tabpanel" aria-labelledby="download-tab">
+
+
         <section class="search-container">
 
           <div class="row row-box">
+            <div class="col-12">
+              <h3>Filter</h3>
+            </div>
 
-            <label class="col-12">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search...">
-                <div class="input-group-append">
-                  <!-- Button trigger modal search results -->
-                  <button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#modal-search-results2">
-                    <i class="fa fa-search"></i>
-                  </button>
-                </div>
-              </div>
-            </label>
-          </div>
+            <form class="col-12 filter-form" action="search.html" method="post">
+              <div class="row">
+                <div class=" col-sm-12 col-lg-6 checkboxes filter-checkboxes">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="personCheck">
+                    <label class="custom-control-label" for="personCheck">Person</label>
+                  </div>
 
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="docCheck">
+                    <label class="custom-control-label" for="docCheck">Document</label>
+                  </div>
 
-          <!-- Modal search results download-->
-          <div class="modal fade" id="modal-search-results2" tabindex="-1" role="dialog" aria-labelledby="modal-search-results2Label" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="modal-search-results2Label">Download files</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-
-                  <div class="col-12 table-container table-responsive">
-                    <table class="table" id="myTable">
-                      <thead class="thead-dark">
-                        <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">Name</th>
-                          <th scope="col">Download files</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">8</th>
-                          <td>Koniglich Essen</td>
-                          <td>
-                            <!-- Button trigger modal upload-1 -->
-                            <button type="button" class="btn download-button"><i class="fa fa-download"></i></button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">9</th>
-                          <td>Koniglich Essen</td>
-                          <td>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn download-button"><i class="fa fa-download"></i></button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">10</th>
-                          <td>Koniglich Essen</td>
-                          <td>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn download-button"><i class="fa fa-download"></i></button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="groupCheck">
+                    <label class="custom-control-label" for="groupCheck">Group</label>
                   </div>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-info">Save changes</button>
+
+                <label class="col-sm-12 col-lg-6">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <div class="input-group-append">
+                      <!-- Button trigger modal search results -->
+                      <button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#modal-search-results2">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </label>
+              </div>
+
+
+              <!-- Modal search results download-->
+              <div class="modal fade" id="modal-search-results2" tabindex="-1" role="dialog" aria-labelledby="modal-search-results2Label" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modal-search-results2Label">Download files</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+
+                      <div class="col-12 table-container table-responsive">
+                        <table class="table" id="myTable">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">Download files</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">8</th>
+                              <td>Koniglich Essen</td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">9</th>
+                              <td>Koniglich Essen</td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">10</th>
+                              <td>Koniglich Essen</td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn download-button"><i class="fa fa-download"></i>Download</button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
         </section>
 
 
@@ -405,276 +426,276 @@
       <!-- SECTION ADMIN -->
       <div class="section-wrapper tab-pane fade" id="admin" role="tabpanel" aria-labelledby="admin-tab">
 
-            <!--first row of buttons-->
-            <div class="container">
+        <!--first row of buttons-->
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-9">
               <div class="row justify-content-center">
-                <div class="col-9">
-                  <div class="row justify-content-center">
-                    <div class="col-md-4 col-sm-6 admin-button">
+                <div class="col-md-4 col-sm-6 admin-button">
 
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        <i class="fas fa-users">
-                          <p>See Users</p>
-                        </i>
-                      </button>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            Here come admin settings.
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-info">Save changes</button>
-                          </div>
-                        </div>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fas fa-users">
+                      <p>See Users</p>
+                    </i>
+                  </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Here come admin settings.
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-info">Save changes</button>
                       </div>
                     </div>
+                  </div>
+                </div>
 
 
-                    <div class="col-md-4 col-sm-6 admin-button">
+                <div class="col-md-4 col-sm-6 admin-button">
 
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        <i class="fas fa-envelope">
-                          <p>Mail box</p>
-                        </i>
-                      </button>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            Here come admin settings.
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
-                        </div>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fas fa-envelope">
+                      <p>Mail box</p>
+                    </i>
+                  </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Here come admin settings.
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
                       </div>
                     </div>
+                  </div>
+                </div>
 
-                    <div class="col-md-4 col-sm-6 admin-button">
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        <i class="fas fa-cogs">
-                          <p>Settings</p>
-                        </i>
-                      </button>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            Here come admin settings.
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
-                        </div>
+                <div class="col-md-4 col-sm-6 admin-button">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fas fa-cogs">
+                      <p>Settings</p>
+                    </i>
+                  </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Here come admin settings.
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
                       </div>
                     </div>
+                  </div>
+                </div>
 
-                    <div class="col-md-4 col-sm-6 admin-button">
+                <div class="col-md-4 col-sm-6 admin-button">
 
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        <i class="fas fa-bell">
-                          <p>Notification</p>
-                        </i>
-                      </button>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            Here come admin settings.
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-info">Save changes</button>
-                          </div>
-                        </div>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fas fa-bell">
+                      <p>Notification</p>
+                    </i>
+                  </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Here come admin settings.
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-info">Save changes</button>
                       </div>
                     </div>
+                  </div>
+                </div>
 
 
-                    <div class="col-md-4 col-sm-6 admin-button">
+                <div class="col-md-4 col-sm-6 admin-button">
 
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        <i class="fas fa-database">
-                          <p>Check data</p>
-                        </i>
-                      </button>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            Here come admin settings.
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
-                        </div>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fas fa-database">
+                      <p>Check data</p>
+                    </i>
+                  </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Here come admin settings.
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
                       </div>
                     </div>
+                  </div>
+                </div>
 
-                    <div class="col-md-4 col-sm-6 admin-button">
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        <i class="fas fa-user">
-                          <p>User</p>
-                        </i>
-                      </button>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            Here come admin settings.
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
-                        </div>
+                <div class="col-md-4 col-sm-6 admin-button">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fas fa-user">
+                      <p>User</p>
+                    </i>
+                  </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Here come admin settings.
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
                       </div>
                     </div>
+                  </div>
+                </div>
 
 
-                    <div class="col-md-4 col-sm-6 admin-button">
+                <div class="col-md-4 col-sm-6 admin-button">
 
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        <i class="fas fa-comments">
-                          <p>Live chat</p>
-                        </i>
-                      </button>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            Here come admin settings.
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-info">Save changes</button>
-                          </div>
-                        </div>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fas fa-comments">
+                      <p>Live chat</p>
+                    </i>
+                  </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Here come admin settings.
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-info">Save changes</button>
                       </div>
                     </div>
+                  </div>
+                </div>
 
 
-                    <div class="col-md-4 col-sm-6 admin-button">
+                <div class="col-md-4 col-sm-6 admin-button">
 
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        <i class="fas fa-key">
-                          <p>Admin</p>
-                        </i>
-                      </button>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            Here come admin settings.
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
-                        </div>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fas fa-key">
+                      <p>Admin</p>
+                    </i>
+                  </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Here come admin settings.
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
                       </div>
                     </div>
+                  </div>
+                </div>
 
-                    <div class="col-md-4 col-sm-6 admin-button">
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        <i class="fas fa-bell">
-                          <p>Notification</p>
-                        </i>
-                      </button>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            Here come admin settings.
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
-                        </div>
+                <div class="col-md-4 col-sm-6 admin-button">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fas fa-bell">
+                      <p>Notification</p>
+                    </i>
+                  </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Here come admin settings.
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
 
 
 
