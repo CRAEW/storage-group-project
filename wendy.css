@@ -1,45 +1,40 @@
+/**********
+ TAB SEARCH
+ **********/
 /*STYLING HEADER TABS */
 header.bg-dark {
   background-color: #253544;
 }
-
-header .nav-item {
-    background-color: #e5e5e5;
-    border: 1px solid #253544;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
+header .nav-tabs-align {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
-header .nav-item < a.active {
-  border-bottom: none !important;
+header .nav-tabs .nav-item .nav-link-border {
+  background-color: #f0f0f0;
+  border: 1px solid #253544;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  color: rgba(0, 0, 0, 0.15);
+  font-weight: 200;
+  text-align: center;
+  height: auto;
 }
 
-header nav ul li a {
-    color: #c4c4c4;
-    font-size: 22px;
-    font-weight: 400;
-    text-align: center;
-}
-
-header .nav-item:hover .muted-link {
-    background-color: lightgrey;
-    color: grey;
-}
-
-.nav-link {
+header .nav-tabs .nav-item .nav-link-border.active {
+  border: none;
   color: #253544;
+  background-color: #fff;
 }
 
-.nav-link:hover {
-  color: inherit;
+header .nav-tabs .nav-item .nav-link-border:hover {
+  color: #253544;
+  background-color: #fff;
 }
 
-.nav-link p {
+header .nav-tabs .nav-item .nav-link-border p {
   display: none;
-}
-
-.nav-item:active a {
-  border-bottom: none;
 }
 
 /* SECTION BOXES GENERAL LAYOUT */
@@ -131,16 +126,18 @@ header .nav-item:hover .muted-link {
 
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   /* MEDIUM SCREENS - TABLET*/
-  .nav-link p {
+  header .nav-tabs .nav-item .nav-link-border p {
     display: block;
+    margin-bottom: 0;
   }
 
 }
 
 @media only screen and (min-width: 993px ) and (max-width: 1200px ) {
   /* LARGE SCREENS - DESKTOP*/
-  .nav-link p {
+  header .nav-tabs .nav-item .nav-link-border p {
     display: inline-block;
+    margin-bottom: 0;
   }
 
   header nav .fas {
@@ -169,8 +166,9 @@ header .nav-item:hover .muted-link {
 
 @media only screen and (min-width: 1201px ) {
   /* EXTRA LARGE SCREENS - RETINA DESKTOP*/
-  .nav-link p {
+  header .nav-tabs .nav-item .nav-link-border p {
     display: inline-block;
+    margin-bottom: 0;
   }
 
   header nav .fas {
