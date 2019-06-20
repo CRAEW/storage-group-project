@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Storage</title>
+
+  <!-- Bootstrap CSS file & custom CSS file -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="wendy.css">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/4469be274f.js"></script>
+  <!-- JS files: jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+  <script src="js/popper.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div class="container border p-0 bg-light">
+
+    <header class="bg-dark">
+      <nav>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="search-tab" data-toggle="tab" href="#search" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-search"></i><p>Search</p></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link muted-link" id="add-file-tab" data-toggle="tab" href="#add-file" role="tab" aria-controls="profile" aria-selected="false"><i class="fas fa-file-import"></i><p>Add file</p></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link muted-link" id="download-tab" data-toggle="tab" href="#download" role="tab" aria-controls="profile" aria-selected="false"><i class="fas fa-download"></i><p>Download</p></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link muted-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><i class="fas fa-cog"></i><p>Admin</p></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="tab-content" id="myTabContent">
+      <div class="section-wrapper tab-pane fade show active" id="search" role="tabpanel" aria-labelledby="search-tab">
+        <section class="search-container">
+          <div class="row row-box">
+
+            <div class="col-12">
+              <h3>Filter</h3>
+            </div>
+
+            <form class="col-12 filter-form" action="search.html" method="post">
+              <div class="row">
+                <div class=" col-sm-12 col-lg-6 checkboxes filter-checkboxes">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="personCheck">
+                    <label class="custom-control-label" for="personCheck">Person</label>
+                  </div>
+
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="docCheck">
+                    <label class="custom-control-label" for="docCheck">Document</label>
+                  </div>
+
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="groupCheck">
+                    <label class="custom-control-label" for="groupCheck">Group</label>
+                  </div>
+                </div>
+
+                <div class=" col-sm-12 col-lg-6 input-group">
+                  <input type="text" id="liveSearch" class="form-control" onkeyup="myFunction()" placeholder="Search for names, documents, groups...">
+                  <div class="input-group-append">
+                    <button class="btn btn-secondary" type="button">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="search-results">
+          <div class="row row-box">
+            <div class="col-12">
+              <label for="qty-page">Show
+                <input id="qty-page" type="number" name="quantity" min="50" max="100" value="50"> Entries
+              </label>
+            </div>
+
+            <div class="col-12 table-container table-responsive">
+              <table class="table" id="myTable">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Mobile nr.</th>
+                    <th scope="col">Group</th>
+                    <th scope="col">Documents</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Alfreds Futterkiste</td>
+                    <td>albert@mail.com</td>
+                    <td>0497123456</td>
+                    <td>Hopper 2.12</td>
+                    <td><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Berglunds snabbkop</td>
+                    <td>albert@mail.com</td>
+                    <td>0497123456</td>
+                    <td>Hopper 2.12</td>
+                    <td><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Island Trading</td>
+                    <td>albert@mail.com</td>
+                    <td>0497123456</td>
+                    <td>Hopper 2.12</td>
+                    <td><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Koniglich Essen</td>
+                    <td>albert@mail.com</td>
+                    <td>0497123456</td>
+                    <td>Hopper 2.12</td>
+                    <td><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Koniglich Essen</td>
+                    <td>albert@mail.com</td>
+                    <td>0497123456</td>
+                    <td>Hopper 2.12</td>
+                    <td><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Koniglich Essen</td>
+                    <td>albert@mail.com</td>
+                    <td>0497123456</td>
+                    <td>Hopper 2.12</td>
+                    <td><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Koniglich Essen</td>
+                    <td>albert@mail.com</td>
+                    <td>0497123456</td>
+                    <td>Hopper 2.12</td>
+                    <td><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>Koniglich Essen</td>
+                    <td>albert@mail.com</td>
+                    <td>0497123456</td>
+                    <td>Hopper 2.12</td>
+                    <td><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>Koniglich Essen</td>
+                    <td>albert@mail.com</td>
+                    <td>0497123456</td>
+                    <td>Hopper 2.12</td>
+                    <td><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>Koniglich Essen</td>
+                    <td>albert@mail.com</td>
+                    <td>0497123456</td>
+                    <td>Hopper 2.12</td>
+                    <td><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i><i class="fas fa-file-alt"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="col-12 pages-navigation">
+              <nav aria-label="Page navigation">
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                  <li class="page-item"><a class="page-link active" href="#">1<span class="sr-only">(current)</span></a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </nav>
+
+            </div>
+        </section>
+
+      </div>
+
+      <div class="tab-pane fade" id="add-file" role="tabpanel" aria-labelledby="add-file-tab">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui assumenda quos doloribus minima corrupti commodi cum et ratione odit quisquam iusto voluptatibus, quaerat optio, officia sunt cupiditate magni ea velit excepturi eligendi aspernatur porro! Nemo, fuga perspiciatis, quae officia corporis dignissimos et, dicta assumenda ea nobis dolores rem quidem. Adipisci, non vel doloribus aliquam optio, molestiae in assumenda perferendis. Ea omnis voluptatum cum, illum, eveniet harum accusamus suscipit excepturi placeat, perferendis fuga dolorem nostrum expedita alias explicabo qui accusantium. Quasi.
+      </div>
+
+      <div class="tab-pane fade" id="download" role="tabpanel" aria-labelledby="download-tab">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione autem, eum asperiores, aliquid aut, natus suscipit quis quae cupiditate deserunt nihil sunt? Vitae nisi corrupti aliquam. Distinctio quos autem rerum tempora facere commodi eaque quis molestiae sit. Distinctio, iste architecto. Repellat laborum consequatur, exercitationem cumque, natus, velit ducimus ipsum aspernatur ab nam a. Veritatis voluptas nemo omnis fugit architecto aliquam beatae. Dignissimos officiis ea facere eveniet rerum eius esse nam magni cupiditate quas quae pariatur, ipsa, voluptatum tempora, nihil dolorum.
+      </div>
+
+      <div class="tab-pane fade" id="admin" role="tabpanel" aria-labelledby="admin-tab">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi omnis explicabo labore doloremque adipisci veniam modi nobis beatae hic id est, eius iure ullam voluptate, tempore molestias quisquam cupiditate doloribus nisi provident sit ducimus! Repellat, iusto quidem. Sunt officiis, molestiae nulla quasi vitae. Possimus in, at ipsa, illo cupiditate laboriosam sit eligendi placeat nulla maiores repellat temporibus consectetur officia quam adipisci aliquam aut quia. Quod error architecto at obcaecati, tempora voluptatum qui consequuntur rerum iusto enim. Iusto sunt, omnis reiciendis.
+      </div>
+    </div>
+
+  </div> <!-- END MAIN container -->
+
+</body>
+
+</html>
